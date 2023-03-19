@@ -11,6 +11,13 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
+	
+	
+	<annotation-driven validator="globalValidator"/>
+	<beans:bean id="globalValidator" class="com.fastcampus.ch2.GlobalValidator"/>
+	
+	
+	
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/**" location="/resources/" />
@@ -23,6 +30,35 @@
 	
 	<context:component-scan base-package="com.fastcampus.ch2" />
 	
+<!-- 	SimpleMappingExceptionResolver  시작-->
+	
+	<beans:bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<beans:property name="defaultErrorView" value="error"/>
+    		<beans:property name="exceptionMappings">
+      			<beans:props>
+        			<beans:prop key="com.fastcampus.ch2.MyException">error400</beans:prop>
+      			</beans:props>
+    		</beans:property>
+		<beans:property name="statusCodes">
+			<beans:props>
+        			<beans:prop key="error400">400</beans:prop>
+			</beans:props>
+		</beans:property>
+  	</beans:bean>	
+	
+	<!-- 	SimpleMappingExceptionResolver  끝-->
+	
+	
+<!-- 	메세지소스 -->
+	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>error_message</beans:value> <!-- /src/main/resources/error_message.properties -->
+			</beans:list>
+		</beans:property>
+		<beans:property name="defaultEncoding" value="UTF-8"/>
+	</beans:bean>
+	<!-- 	메세지소스 끝-->
 	
 	
 </beans:beans>

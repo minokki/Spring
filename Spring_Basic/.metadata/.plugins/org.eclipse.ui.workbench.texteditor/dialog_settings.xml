@@ -8,10 +8,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="error"/>
+			<item value="String birth"/>
 			<item value="trace"/>
 			<item value="param"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Date birth"/>
 			<item value="user"/>
 		</list>
 	</section>
