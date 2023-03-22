@@ -7,6 +7,21 @@
         SELECT count(*) FROM board
     </select>
 
+    <sql id="searchCondition">
+        <choose>
+            <when test='option=="T"'>
+                and title LIKE concat('%',#{keyword},'%')
+            </when>
+            <when test='option=="W"'>
+                and writer LIKE concat('%',#{keyword},'%')
+            </when>
+            <otherwise>
+                and (title LIKE concat('%',#{keyword},'%')
+                or content LIKE concat('%',#{keyword},'%'))
+            </otherwise>
+        </choose>
+    </sql>
+
     <delete id="deleteAll">
         DELETE FROM board
     </delete>
@@ -50,7 +65,7 @@
         SET   title = #{title}
           , content = #{content}
           , up_date = now()
-        WHERE bno = #{bno}
+        WHERE bno = #{bno} and writer = #{writer}
     </update>
 
     <update id="updateCommentCnt" parameterType="map">
@@ -65,4 +80,20 @@
         WHERE bno = #{bno}
     </update>
 
+    <select id="searchSelectPage" parameterType="SearchCondition" resultType="BoardDto">
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date
+        FROM board
+        WHERE true
+        <include refid="searchCondition"></include>
+
+        ORDER BY reg_date DESC, bno DESC
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="searchResultCnt" parameterType="SearchCondition" resultType="int">
+        SELECT count(*)
+        FROM board
+        WHERE true
+        <include refid="searchCondition"></include>
+    </select>
 </mapper>

@@ -3,7 +3,7 @@
 <%@ page session="false"%>
 <c:set var="loginId" value="${pageContext.request.getSession(false)==null ? '' : pageContext.request.session.getAttribute('id')}"/>
 <c:set var="loginOutLink" value="${loginId=='' ? '/login/login' : '/login/logout'}"/>
-<c:set var="loginOut" value="${loginId=='' ? 'Login' : 'ID='+=loginId}"/>
+<c:set var="loginOut" value="${loginId=='' ? 'Login' : 'LogOut'}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@
 <body>
 <div id="menu">
     <ul>
-        <li id="logo">fastcampus</li>
+        <li id="logo"><a href="<c:url value='/'/>">fastcampus</a></li>
         <li><a href="<c:url value='/'/>">Home</a></li>
         <li><a href="<c:url value='/board/list'/>">Board</a></li>
         <li><a href="<c:url value='${loginOutLink}'/>">${loginOut}</a></li>
