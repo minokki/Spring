@@ -4,24 +4,22 @@
 ---
 ### 기술 스택
 
-  ####  :blue_book: back-end
+#### :blue_book: back-end
   
-  <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">
+  <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">, 
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">
   <br/>
+ ### :blue_book: db
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=Oracle&logoColor=white"> 
-  
-  <br/>
-
+ 
   ####  :closed_book: ide
 
-  <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">
-  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat&logo=Eclipse%20IDE&logoColor=white">
+  <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">, 
+  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat&logo=Eclipse%20IDE&logoColor=white">, 
   <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=VisualStudioCode&logoColor=white">
  
 
-<br>
+
 
 ### 교육
 
@@ -42,11 +40,6 @@
 > #### ch4 
 * mybites 를 활용한 게시판 구현
   * CRUD , 댓글 ,검색 
-<br>
-
-
-
-
 
 
 > ### 📺 화면 구성 
@@ -56,6 +49,5 @@
 | **회원가입**   |  **게시글 리스트**   |  
 | <img width="250" src="https://user-images.githubusercontent.com/119803774/227369338-50ab8fe2-2277-4f5f-ac32-08b07e26ca17.png"/>   |  <img width="250" src="https://user-images.githubusercontent.com/119803774/227369341-979e8676-5223-4b13-8bc6-5f12e9d7b284.png"/>     |
 
-<br>
 
 ---
