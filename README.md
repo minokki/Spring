@@ -9,7 +9,7 @@
   
 | Java | Spring |  Mysql   |  Mybatis   |   IntelliJ    |
 | :--------: | :--------: | :------: | :-----: | :-----: 
-|   <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">    |     <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">  | <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">  | Mybatis |   <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">    |
+|   <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">    |     <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">  | <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">  | <img src="https://img.shields.io/badge/-mybatis-red"> |   <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">    |
 
  
 
