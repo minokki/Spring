@@ -58,7 +58,6 @@ public class BoardController {
         boardDto.setWriter(writer);
         try {
            int rowCnt = boardService.write(boardDto);
-
            if(rowCnt !=1)
                throw new Exception("Write failed");
             ra.addFlashAttribute("msg", "WRT_OK");
@@ -86,6 +85,7 @@ public class BoardController {
             m.addAttribute(boardDto);
             m.addAttribute("page", page);
             m.addAttribute("pageSize", pageSize);
+
 
         } catch (Exception e) {
             throw new RuntimeException(e);
