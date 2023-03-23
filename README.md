@@ -1,24 +1,17 @@
+
 ## Spring
 스프링 프레임워크  스터디기록
 
 ---
-### 기술 스택
 
 #### :blue_book: back-end
   
-  <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">, 
-  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">
-  <br/>
- ### :blue_book: db
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">
- 
-  ####  :closed_book: ide
+  
+| Java | Spring |  Mysql   |  Mybatis   |   IntelliJ    |
+| :--------: | :--------: | :------: | :-----: | :-----: 
+|   <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">    |     <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">  | <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">  | Mybatis |   <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">    |
 
-  <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">, 
-  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat&logo=Eclipse%20IDE&logoColor=white">, 
-  <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=VisualStudioCode&logoColor=white">
  
-
 
 
 ### 교육
@@ -51,3 +44,4 @@
 
 
 ---
+
