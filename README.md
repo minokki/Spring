@@ -4,6 +4,22 @@
 ---
 ### 기술 스택
 
+  ####  :blue_book: back-end
+  
+  <img src="https://img.shields.io/badge/JAVA-007396?style=flate&logo=Java&logoColor=white">
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white">
+  <br/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white">
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=Oracle&logoColor=white"> 
+  
+  <br/>
+
+  ####  :closed_book: ide
+
+  <img src="https://img.shields.io/badge/InteliJ-232F3E?style=flat&logo=IntelliJ IDEA&logoColor=white">
+  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat&logo=Eclipse%20IDE&logoColor=white">
+  <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=VisualStudioCode&logoColor=white">
+ 
 
 <br>
 
