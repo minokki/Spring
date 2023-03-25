@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.mino.mapper.BoardMapper">
+  
+  <!-- 검색 조건문 -->
+    <sql id="criteria">
+        <trim prefix="where (" suffix=")" prefixOverrides="OR">
+            <foreach collection="typeArr" item="type">
+                <trim prefix="OR">
+                    <choose>
+                        <when test="type == 'T'.toString()">
+                            title like concat('%',#{keyword},'%') 
+                        </when>
+                        <when test="type == 'C'.toString()">
+                            content like concat('%',#{keyword},'%') 
+                        </when>
+                        <when test="type == 'W'.toString()">
+                            writer like concat('%',#{keyword},'%' )
+                        </when>
+                    </choose>
+                </trim>
+            </foreach>
+        </trim>
+    </sql>
+  
+  <!-- 게시판등록 -->
+  <insert id="write">
+  
+   insert into mino_board(title,content,writer) values(#{title}, #{content},#{writer})
+   
+  </insert>
+  
+  <!-- 게시판목록 -->
+  <select id="getList" resultType="com.mino.model.BoardVO">
+  
+  	select * from mino_board order by bno desc
+  
+  </select>
+  
+  <!-- 게시글보기 -->
+  <select id="getPage" resultType="com.mino.model.BoardVO">
+  
+  select * from mino_board where bno= #{bno}
+  
+  </select>
+  
+  <!-- 수정 -->
+  <update id="modifyPage">
+  
+  update mino_board set title=#{title},content=#{content}, updateDate=now() where bno = #{bno}
+  
+  </update>
+  
+  <!-- 삭제 -->
+  <delete id="delete">
+  
+  delete from mino_board where bno = #{bno}
+  
+  </delete>
+  
+  <!-- 페이징-> (수정) 검색기능포함 -->
+  <select id="paging" resultType="com.mino.model.BoardVO">
+  
+   select * from (
+                select bno, title, writer, regdate, updatedate  
+                from mino_board 
+                <if test="keyword != null">
+                    <include refid="criteria"></include>
+                </if>
+                order by bno desc) as paging order by bno desc
+        limit #{skip},#{amount}
+  
+  </select>
+  
+  <!-- 게시물 총갯수 -->
+  <select id="totalPage" resultType="int">
+  
+  select count(*) from mino_board
+  		<if test="keyword != null">
+  		
+           <include refid="criteria"></include>
+       
+        </if>
+  
+  </select>
+  
+ 
+  
+  </mapper>
